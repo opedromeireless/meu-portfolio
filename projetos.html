@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projetos & Contato - Pedro Meireles</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="background-glow"></div>
+
+        <header class="glass-nav">
+            <a href="index.html" class="logo">Pedro<span>.Meireles</span></a>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre Mim</a>
+                <a href="projetos.html" class="active">Projetos & Contato</a>
+            </nav>
+        </header>
+
+        <main class="container-page">
+            <section class="glass-card page-card">
+                <h2>Projetos em Destaque</h2>
+                <div class="projects-grid">
+                    <div class="project-mini-card">
+                        <h3>Vitalício</h3>
+                        <p>Jogo de simulação política desenvolvido em React Native, Expo, Laravel e PostgreSQL. Arquitetura completa de telas no frontend em TypeScript via Axios.</p>
+                    </div>
+                    <div class="project-mini-card">
+                        <h3>Pomar</h3>
+                        <p>Plataforma em Next.js 15 e TypeScript focada conectar pequenos agricultores locais do interior a compradores da região, contendo um pplano de negócio estruturado.</p>
+                    </div>
+                    <div class="project-mini-card">
+                        <h3>PartyClub</h3>
+                        <p>Aplicativo modular para a descoberta de eventos criado em React Native (Expo SDK 54) integrado a Supabase para persistência e Zustand para controle de estados.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contato-section" class="glass-card page-card">
+                <h2>Vamos iniciar uma parceria?</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" required placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" maxlength="8" required placeholder="Apenas números">
+                    </div> 
+                    <div class="form-group flex-3">
+                        <label for="logradouro">Endereço Auto-Preenchido</label>
+                        <input type="text" id="logradouro" readonly placeholder="Aguardando CEP...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" rows="4" required placeholder="Como posso ajudar o seu negócio?"></textarea>
+                </div>
+                </form>
+            </section>
+        </main>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
