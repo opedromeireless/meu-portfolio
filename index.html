@@ -3,21 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pedro Meireles - Desenvolvedor Full Stack focado em React, Node.js e Laravel, unindo código a visão estratégica de negócio."
+    />
     <title>Pedro Meireles - Dev Full Stack</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%2334d399'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='55' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div class="background-glow"></div>
+    <div class="background-glow glow-secondary"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
 
     <header class="glass-nav">
       <a href="index.html" class="logo">Pedro<span>.Meireles</span></a>
-      <nav>
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-menu">
         <a href="index.html" class="active">Início</a>
         <a href="sobre.html">Sobre Mim</a>
         <a href="projetos.html">Projetos & Contato</a>
@@ -25,21 +44,38 @@
     </header>
 
     <main class="container-center">
-      <section class="glass-card hero-car">
-        <span class="badge">Disponível para novos desafios</span>
-        <h1>Building solutions with code</h1>
-        <p>
-          Desenvolvedor Full Stack especializado em conectar decisões técnicas
-          aos objetivos estratégicos do negócio.
-        </p>
-        <div class="tech-stack-tags">
-          <span>React</span><span>Node.js</span><span>Python</span
-          ><span>PHP</span><span>Laravel</span><span>SQL</span>
+      <div class="hero-wrapper">
+        <section class="glass-card hero-card">
+          <span class="badge"
+            ><span class="dot"></span>Disponível para novos desafios</span
+          >
+          <h1>Building solutions with code</h1>
+          <p>
+            Desenvolvedor Full Stack especializado em conectar decisões técnicas
+            aos objetivos estratégicos do negócio.
+          </p>
+          <div class="tech-stack-tags">
+            <span>React</span><span>Node.js</span><span>Python</span>
+            <span>PHP</span><span>Laravel</span><span>SQL</span>
+          </div>
+          <div class="cta-wrapper">
+            <button id="cta-btn" class="btn-primary">Conhecer Projetos</button>
+            <a href="sobre.html" class="btn-ghost">Sobre Mim</a>
+          </div>
+        </section>
+
+        <div class="terminal-mock reveal">
+          <div class="terminal-header">
+            <span class="tdot red"></span>
+            <span class="tdot yellow"></span>
+            <span class="tdot green"></span>
+            <span class="tname">pedro@portifolio ~ </span>
+          </div>
+          <div class="terminal-body" id="terminal-body"></div>
         </div>
-        <div class="cta-wrapper">
-          <button id="cta-btn" class="btn-primary">Conhecer Projetos</button>
-        </div>
-      </section>
+      </div>
     </main>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

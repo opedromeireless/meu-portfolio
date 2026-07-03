@@ -1,76 +1,136 @@
 <!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre Mim - Pedro Meireles</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="background-glow"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Trajetória, experiência profissional e formação de Pedro Meireles, desenvolvedor Full Stack."
+  />
+  <title>Sobre Mim - Pedro Meireles</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%2334d399'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='55' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="background-glow"></div>
+  <div class="background-glow glow-secondary"></div>
+  <div class="scroll-progress" id="scroll-progress"></div>
 
-    <header class="glass-nav">
-      <a href="index.html" class="logo">Pedro<span>.Meireles</span></a>
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="sobre.html" class="active">Sobre Mim</a>
-        <a href="projetos.html">Projetos & Contato</a>
-      </nav>
-    </header>
+  <header class="glass-nav">
+    <a href="index.html" class="logo">Pedro<span>.Meireles</span></a>
+    <button
+      id="nav-toggle"
+      class="nav-toggle"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-menu">
+      <a href="index.html">Início</a>
+      <a href="sobre.html" class="active">Sobre Mim</a>
+      <a href="projetos.html">Projetos & Contato</a>
+    </nav>
+  </header>
 
-    <main class="container-page">
-      <section class="glass-card page-card">
-        <h2>Minha Trajetória</h2>
+  <main class="container-page">
+    <section class="glass-card page-card reveal">
+      <div class="profile-head">
+        <div class="avatar-ring">
+          <div class="avatar-inner">PM</div>
+        </div>
+        <div class="profile-meta">
+          <h2>Minha Trajetória</h2>
+          <p>Ivoti, Rio Grande do Sul - Brasil</p>
+        </div>
+      </div>
+      <p>
+        Tenho 18 anos e estou construindo uma carreira que une desenvolvimento
+        de software, liderança e visão estratégica de negócios. Atuo em ciclos
+        completos de desenvolvimento, garantindo qualidade e escalabilidade da
+        especificação à produção;
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Desenvolvedor Full Stack - E-mine Software</h3>
+          <span>Março de 2026 - Atualmente</span>
+          <p>
+            Desenvolvimento e manutenção de aplicações web e mobile modernas
+            utilizando React, PHP, Laravel e JavaScript em ambiente ágil.
+            Colaboração direta com a equipe de engenharia na construção de
+            soluções escaláveis.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>Presidente do Grêmio Estudantil - Instituto Ivoti</h3>
+          <span>Setembro de 2024 - Setembro de 2025</span>
+          <p>
+            Liderança de uma equipe multidisciplinar de 20 integrantes. Gestão
+            de projetos internos e condução de negociações diretas com a
+            diretoria institucional para mplementação de melhorias sob cenários
+            de pressão.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-card page-card reveal">
+      <h2>Educação & Certificados</h2>
+      <div class="education-list">
         <p>
-          Tenho 18 anos e estou construindo uma carreira que une desenvolvimento
-          de software, liderança e visão estratégica de negócios. Atuo em ciclos
-          completos de desenvolvimento, garantindo qualidade e escalabilidade da
-          especificação à produção.
+          <strong>Técnico em Informática</strong> - Instituto Ivoti (2023 -
+          2025)
         </p>
+        <p>
+          <strong>CS50 - Introdução à Ciência da Computação</strong> - Harvard
+          University
+        </p>
+        <p><strong>Desenvolvedor Full Stack</strong> - +praTI</p>
+        <p><strong>Versionamento de Código</strong> - PUCRS</p>
+      </div>
+    </section>
 
-        <div class="experience-grid">
-          <div class="exp-item">
-            <h3>Desenvolvedor Full Stack - E-mine Software</h3>
-            <span>Março de 2026 - O momento</span>
-            <p>
-              Desenvolvimento e manutenção de aplicações web e mobiles modernas
-              utilizando React, PHP, Laravel e JavaScript em ambiente ágil.
-              Colaboração direta com a equipena engenharia de soluções
-              escaláveis.
-            </p>
-          </div>
-          <div class="exp-item">
-            <h3>Presidente do Grêmio Estudantil - Instituto Ivoti</h3>
-            <span>Setembro de 2024 - Setembro de 2025</span>
-            <p>
-              Liderança de uma equipe multidisciplinar de 20 integrantes. Gestão
-              de projetos interno e condução de negociações diretas com a
-              diretoria institucional para implementação de melhorias sob
-              cenários de pressão.
-            </p>
+    <section class="glass-card page-card reveal">
+      <h2>Stack & Ferramentas</h2>
+      <div class="skills-groups">
+        <div>
+          <h4>Frontend</h4>
+          <div class="tag-list">
+            <span>React</span><span>React Nativr</span><span>TypeScript</span
+            ><span>JavaScript</span>
           </div>
         </div>
-      </section>
-
-      <section class="glass-card page-card">
-        <h2>Educação & Certificados</h2>
-        <div class="education-list">
-          <p>
-            <strong>Técnico em Informática</strong> - Instituto Ivoti (2023 -
-            2025)
-          </p>
-          <p>
-            <strong>CS50 - Introdução à Ciência da Computação</strong> - Harvard
-            University
-          </p>
-          <p><strong>Desenvolvedor Full Stack</strong> - +praTI</p>
-          <p><strong>Versionamento de Código</strong> - PUCRS</p>
+        <div>
+          <h4>Backend</h4>
+          <div class="tag-list">
+            <span>Node.js</span><span>Laravel</span><span>PHP</span
+            ><span>Python</span>
+          </div>
         </div>
-      </section>
-    </main>
-  </body>
-</html>
+        <div>
+          <h4>Dados & Infra</h4>
+          <div class="tag-list">
+            <span>SQL</span><span>PostgreSQL</span><span>Supabase</span
+            ><span>Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Pedro Meireles. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>

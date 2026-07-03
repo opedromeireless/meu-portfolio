@@ -1,71 +1,461 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projetos & Contato - Pedro Meireles</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="background-glow"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projetos e formulário de contato de Pedro Meireles, desenvolvedor Full Stack."
+    />
+    <title>Projetos & Contato - Pedro Meireles</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%2334d399'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='55' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background-glow"></div>
+    <div class="background-glow glow-secondary"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
 
-        <header class="glass-nav">
-            <a href="index.html" class="logo">Pedro<span>.Meireles</span></a>
-            <nav>
-                <a href="index.html">Início</a>
-                <a href="sobre.html">Sobre Mim</a>
-                <a href="projetos.html" class="active">Projetos & Contato</a>
-            </nav>
-        </header>
+    <header class="glass-nav">
+      <a href="index.html" class="logo">Pedro<span>.Meireles</span></a>
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-menu">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre Mim</a>
+        <a href="projetos.html" class="active">Projetos & Contato</a>
+      </nav>
+    </header>
 
-        <main class="container-page">
-            <section class="glass-card page-card">
-                <h2>Projetos em Destaque</h2>
-                <div class="projects-grid">
-                    <div class="project-mini-card">
-                        <h3>Vitalício</h3>
-                        <p>Jogo de simulação política desenvolvido em React Native, Expo, Laravel e PostgreSQL. Arquitetura completa de telas no frontend em TypeScript via Axios.</p>
-                    </div>
-                    <div class="project-mini-card">
-                        <h3>Pomar</h3>
-                        <p>Plataforma em Next.js 15 e TypeScript focada conectar pequenos agricultores locais do interior a compradores da região, contendo um pplano de negócio estruturado.</p>
-                    </div>
-                    <div class="project-mini-card">
-                        <h3>PartyClub</h3>
-                        <p>Aplicativo modular para a descoberta de eventos criado em React Native (Expo SDK 54) integrado a Supabase para persistência e Zustand para controle de estados.</p>
-                    </div>
-                </div>
-            </section>
+    <main class="container-page">
+      <section class="glass-card page-card reveal">
+        <h2>Projetos em Destaque</h2>
+        <p class="section-lead">
+          Uma seleção de projetos pessoais onde atuo do planejamento à
+          implementação, do frontend ao backend. As prévias abaixo são
+          representações estilizadas da identidade visual de cada app.
+        </p>
+        <div class="projects-grid">
+          <div class="project-mini-card">
+            <svg
+              class="project-visual"
+              viewBox="0 0 400 250"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+            >
+              <defs>
+                <linearGradient id="gradVital" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#3b0764" />
+                  <stop offset="1" stop-color="#831843" />
+                </linearGradient>
+              </defs>
+              <rect width="400" height="250" fuill="url(#gradVital)" />
+              <rect
+                x="150"
+                y="20"
+                width="100"
+                height="210"
+                rx="16"
+                fill="rgba(3,7,18,0.55)"
+                stroke="rgba(255,255,255,0.15)"
+              />
+              <rect
+                x="160"
+                y="34"
+                width="80"
+                height="10"
+                rx="3"
+                fill="rgba(255,255,255,0.5)"
+              />
+              <rect
+                x="160"
+                y="52"
+                width="80"
+                height="34"
+                rx="6"
+                fill="rgba(255,255,255,0.12)"
+              />
+              <rect
+                x="166"
+                y="60"
+                width="45"
+                height="6"
+                rx="3"
+                fill="rgba(255,255,255,0.4)"
+              />
+              <rect
+                x="166"
+                y="72"
+                width="30"
+                height="6"
+                rx="3"
+                fill="rgba(255,255,255,0.25)"
+              />
+              <rect
+                x="160"
+                y="94"
+                width="80"
+                height="20"
+                rx="5"
+                fill="rgba(255,255,255,0.5)"
+              />
+              <rect
+                x="160"
+                y="120"
+                width="80"
+                height="20"
+                rx="5"
+                fill="rgba(255,255,255,0.08)"
+              />
+              <rect
+                x="160"
+                y="146"
+                width="80"
+                height="20"
+                rx="5"
+                fill="rgba(255,255,255,0.08)"
+              />
+              <rect
+                x="165"
+                y="196"
+                width="70"
+                height="18"
+                rx="9"
+                fill="#db2777"
+              />
+            </svg>
+            <div class="project-body">
+              <h3>Vitalício</h3>
+              <p>
+                Jogo de simulação política desenvolvido em React Native, Expo,
+                Laravel e PostgreSQL. Arquitetura completa de telas no frontend
+                em TypeScript via Axios.
+              </p>
+              <div class="project-stack">
+                <span>React Native</span><span>Expo</span><span>Laravel</span>
+                <span>PostgreSQL</span><span>TypeScript</span>
+              </div>
+            </div>
+          </div>
 
-            <section id="contato-section" class="glass-card page-card">
-                <h2>Vamos iniciar uma parceria?</h2>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" required placeholder="Seu nome">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" required placeholder="seu@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="cep">CEP</label>
-                        <input type="text" id="cep" maxlength="8" required placeholder="Apenas números">
-                    </div> 
-                    <div class="form-group flex-3">
-                        <label for="logradouro">Endereço Auto-Preenchido</label>
-                        <input type="text" id="logradouro" readonly placeholder="Aguardando CEP...">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" rows="4" required placeholder="Como posso ajudar o seu negócio?"></textarea>
-                </div>
-                </form>
-            </section>
-        </main>
+          <div class="project-mini-card">
+            <svg
+              class="project-visual"
+              viewBox="0 0 400 250"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+            >
+              <defs>
+                <linearGradient id="gradPomar" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#64e3b" />
+                  <stop offset="1" stop-color="#166534" />
+                </linearGradient>
+              </defs>
+              <rect width="400" height="250" fill="url(#gradPomar)" />
+              <rect
+                x="0"
+                y="0"
+                width="400"
+                height="26"
+                fill="rgba(0,0,0,0.25)"
+              />
+              <circle cx="16" cy="13" r="4" fill="#ff5f56" />
+              <circle cx="30" cy="13" r="4" fill="#ffbd2e" />
+              <circle cx="44" cy="13" r="4" fill="#27c93f" />
+              <rect
+                x="70"
+                y="6"
+                width="200"
+                height="14"
+                rx="7"
+                fill="rgba(255,255,255,0.1)"
+              />
+              <rect
+                x="24"
+                y="46"
+                width="106"
+                height="80"
+                rx="10"
+                fill="rgba(255,255,255,0.09)"
+              />
+              <rect
+                x="147"
+                y="46"
+                width="106"
+                height="80"
+                rx="10"
+                fill="rgba(255,255,255,0.09)"
+              />
+              <rect
+                x="270"
+                y="46"
+                width="106"
+                height="80"
+                rx="10"
+                fill="rgba(255,255,255,0.09)"
+              />
+              <circle cx="77" cy="72" r="14" fill="rgba(163,230,53,0.6)" />
+              <circle cx="200" cy="72" r="14" fill="rgba(163,230,53,0.4)" />
+              <circle cx="323" cy="72" r="14" fill="rgba(163,230,53,0.5)" />
+              <rect
+                x="40"
+                y="100"
+                width="70"
+                height="8"
+                rx="4"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <rect
+                x="163"
+                y="100"
+                width="70"
+                height="8"
+                rx="4"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <rect
+                x="286"
+                y="100"
+                width="70"
+                height="8"
+                rx="4"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <rect
+                x="24"
+                y="146"
+                width="352"
+                height="70"
+                rx="10"
+                fill="rgba(255,255,255,0.05)"
+              />
+              <rect
+                x="44"
+                y="164"
+                width="150"
+                height="10"
+                rx="5"
+                fill="rgba(255,255,255,0.35)"
+              />
+              <rect
+                x="44"
+                y="182"
+                width="220"
+                height="8"
+                rx="4"
+                fill="rgba(255,255,255,0.2)"
+              />
+              <rect
+                x="300"
+                y="164"
+                width="56"
+                height="24"
+                rx="6"
+                fill="#22c55e"
+              />
+            </svg>
+            <div class="project-body">
+              <h3>Pomar</h3>
+              <p>
+                Plataforma em Next.js 15 e TypeScript focada em conectar
+                pequenos agricultores locais do interior a compradores da
+                região, com um plano de negócio estruturado.
+              </p>
+              <div class="project-stack">
+                <span>Next.js 15</span><span>TypeScript</span
+                ><span>Supabase</span>
+              </div>
+            </div>
+          </div>
 
-        <script src="js/script.js"></script>
-    </body>
+          <div class="project-mini-card">
+            <svg
+              class="project-visual"
+              viewBox="0 0 400 250"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+            >
+              <defs>
+                <linearGradient id="gradParty" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#1e1b4b" />
+                  <stop offset="1" stop-color="#4c1d95" />
+                </linearGradient>
+              </defs>
+              <rect width="400" height="250" fill="url(#gradParty)" />
+              <rect
+                x="150"
+                y="20"
+                width="100"
+                height="210"
+                rx="16"
+                fill="rgba(3,7,18,0.55)"
+                stroke="rgba(255,255,255,0.15)"
+              />
+              <rect
+                x="160"
+                y="34"
+                width="80"
+                height="60"
+                rx="8"
+                fill="rgba(139,92,246,0.35)"
+              />
+              <circle cx="175" cy="52" r="7" fill="rgba(255,255,255,0.6)" />
+              <rect
+                x="188"
+                y="46"
+                width="40"
+                height="6"
+                rx="3"
+                fill="rgba(255,255,255,0.5)"
+              />
+              <rect
+                x="188"
+                y="58"
+                width="28"
+                height="6"
+                rx="3"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <rect
+                x="166"
+                y="78"
+                width="68"
+                height="6"
+                rx="3"
+                fill="rgba(255,255,255,0.25)"
+              />
+              <rect
+                x="160"
+                y="102"
+                width="80"
+                height="18"
+                rx="5"
+                fill="rgba(255,255,255,0.08)"
+              />
+              <rect
+                x="160"
+                y="126"
+                width="80"
+                height="18"
+                rx="5"
+                fill="rgba(255,255,255,0.08)"
+              />
+              <rect
+                x="160"
+                y="150"
+                width="80"
+                height="18"
+                rx="5"
+                fill="rgba(255,255,255,0.08)"
+              />
+              <circle cx="200" cy="205" r="11" fill="#8b5cf6" />
+            </svg>
+            <div class="project-body">
+              <h3>PartyClub</h3>
+              <p>
+                Aplicativo modular para descoberta de evetos criado em React
+                Native (Expo SDK 54), integrado a Supabase para persistência e
+                Zustand para controle de estados.
+              </p>
+              <div class="project-stack">
+                <span>React Native</span><span>Supabase</span
+                ><span>Zustand</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato-section" class="glass-card page-card reveal">
+        <h2>Vamos iniciar uma parceria?</h2>
+        <p class="section-lead">
+          Preencha o formulário abaixo e retorno o contato o quanto antes.
+        </p>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" required placeholder="Seu nome" />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="seu@email.com"
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cep">CEP</label>
+              <input
+                type="text"
+                id="cep"
+                inputmode="numeric"
+                maxlength="8"
+                required
+                placeholder="Apenas números"
+              />
+            </div>
+            <div class="form-group flex-3">
+              <label for="logradouro">Endereço Auto-Preenchido</label>
+              <input
+                type="text"
+                id="logradouro"
+                readonly
+                placeholder="Aguardando CEP..."
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              rows="4"
+              required
+              placeholder="Como posso ajudar o seu negócio?"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Enviar Mensagem</button>
+          <div id="form-feedback" class="form-feedback" role="status"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a
+          href="www.linkedin.com/in/pedromeireles-it"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+        <a
+          href="https://github.com/opedromeireless"
+          target="_blank"
+          rel="noopener"
+          >Linkedin</a
+        >
+      </div>
+      <p>&copy; 2026 Pedro Meireles. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
