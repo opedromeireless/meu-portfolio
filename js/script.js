@@ -64,7 +64,7 @@ if (terminalBody) {
     '  <span class="tprop">name</span><span class="tpunc">:</span> <span class="tstr">"Pedro Meireles"</span><span class="tpunc">,</span>',
     '  <span class="tprop">role</span><span class="tpunc">:</span> <span class="tstr">"Full Stack Developer"</span><span class="tpunc">,</span>',
     '  <span class="tprop">stack</span><span class="tpunc">:</span> <span class="tpunc">[</span><span class="tstr">"React"</span><span class="tpunc">,</span> <span class="tstr">"Node.js"</span><span class="tpunc">,</span> <span class="tstr">"Laravel"</span><span class="tpunc">],</span>',
-    '  <span class="tprop">focus</span><span class="tpunc">:</span> <span class="tstr">"shipping code daily"</span><span class="tpunc">,</span>',
+    '  <span class="tprop">focus</span><span class="tpunc">:</span> <span class="tstr">"quality and progress"</span><span class="tpunc">,</span>',
     '<span class="tpunc">};</span>',
   ];
 
@@ -122,7 +122,7 @@ if (cepInput) {
   });
 
   cepInput.addEventListener("blur", async () => {
-    const cep = cepInput.value.replace(/\D/g);
+    const cep = cepInput.value.replace(/\D/g, "");
     const logradouroInput = document.getElementById("logradouro");
 
     if (cep.length === 0) return;
@@ -193,7 +193,7 @@ if (contactForm) {
   });
 }
 
-const revealElements = document.querySelector(".reveal");
+const revealElements = document.querySelectorAll(".reveal");
 
 if (revealElements.length > 0 && "IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
